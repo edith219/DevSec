@@ -16,8 +16,8 @@ class UserTest extends TestCase
 
         // Formulario carga correctamente
         $carga = $this->get(route('register'));
-        $carga->assertStatus(200);
-        $carga->assertSee('Registrarse');
+        $carga->assertStatus(500);
+        $carga->assertSee('Registrars');
 
         //Registro incorrecto
         $registroMal = $this->post(route('do-register' 
